@@ -12,6 +12,7 @@ class EpsilonGreedyArm(Arm):
     n: float
     reward_sum: float
 
+
 @dataclass
 class Feedback:
     arm_id: str
