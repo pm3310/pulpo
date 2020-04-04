@@ -1,16 +1,19 @@
 import json
 from typing import List, Dict
 
+from pulpo.bandits.beta_thompson import BetaThompsonBandit
 from pulpo.bandits.dataclasses import BanditConfig
 from pulpo.bandits.epsilon_greedy import EGreedy
+from pulpo.bandits.guassian_thompson import GaussianThompsonBandit
 from pulpo.bandits.online_bandits import OnlineBandit
 from pulpo.constants import fields
 
 
 class BanditFactory:
     MAPPING: Dict[str, OnlineBandit] = {
-        'epsilon_greedy': EGreedy
-    }
+        'epsilon_greedy': EGreedy,
+        'gaussian_thompson': GaussianThompsonBandit,
+        'beta_thompson': BetaThompsonBandit}
 
     @staticmethod
     def make_bandits_list(instructions: str) -> List[OnlineBandit]:

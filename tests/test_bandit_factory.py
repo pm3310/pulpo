@@ -61,9 +61,7 @@ class BanditFactoryTest(TestCase):
     def test_should_instantiate_all_types_of_bandit_with_default_values(self):
         bandit_types: List[str] = list(BanditFactory.MAPPING.keys())
 
-        json_string = '[{}]'.format(
-            ", ".join([BanditFactoryTest._get_default_config(type) for type in bandit_types])
-        )
+        json_string = '[' + ", ".join([BanditFactoryTest._get_default_config(type) for type in bandit_types]) + ']'
 
         factory = BanditFactory()
 
@@ -71,10 +69,7 @@ class BanditFactoryTest(TestCase):
 
     @staticmethod
     def _get_default_config(bandit_type: str):
-        default_values = {
-            "bandit_id": "test_bandit_{}".format(bandit_type),
-            "bandit_type": bandit_type,
-            "arm_ids": ["arm1", "arm2", "arm3"]
-        }
+        default_values = {"bandit_id": "test_bandit_" + bandit_type, "bandit_type": bandit_type,
+                          "arm_ids": ["arm1", "arm2", "arm3"]}
 
         return json.dumps(default_values)
