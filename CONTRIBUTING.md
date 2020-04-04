@@ -22,7 +22,7 @@
 
 ## Testing Locally
 - `make test`: Runs tests with pytest
-- `make test-all`: Runs tests on py35, py36, py37 and py38 with tox and pytest
+- `make test-all`: Runs tests on py36, py37 and py38 with tox and pytest
 
 ## Linting Locally
 - `make lint`
