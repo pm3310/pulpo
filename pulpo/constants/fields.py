@@ -11,5 +11,5 @@ REWARD_SUM = 'reward_sum'
 SQUARED_REWARD_SUM = 'squared_reward_sum'
 N_REWARDS = 'n_rewards'
 
-# Parameters
+# Parametres
 EPSILON = 'epsilon'
