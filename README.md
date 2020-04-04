@@ -1,3 +1,7 @@
+**Build Status**
+
+master: [![Build Status](https://travis-ci.org/pm3310/pulpo.svg?branch=master)](https://travis-ci.org/pm3310/pulpo)
+
 # pulpo
 
 A library and sdk for non-contextual and contextual Multi-Armed-Bandit (MAB) algorithms for multiple use cases. The sdk version enables you to deploy it on AWS. 
